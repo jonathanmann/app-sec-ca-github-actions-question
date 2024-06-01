@@ -1,4 +1,4 @@
-echo "name: SQLite DB Test
+name: SQLite DB Test
 
 on: 
   push:
