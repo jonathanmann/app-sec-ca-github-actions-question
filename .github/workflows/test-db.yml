@@ -1,0 +1,23 @@
+echo "name: SQLite DB Test
+
+on: 
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  db-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install SQLCipher
+      run: sudo apt-get install -y sqlcipher
+
+    - name: Test SQLite Database
+      run: |
+        sqlcipher github_actions_question.db -cmd \"PRAGMA key = '\${{ secrets.DB_PASSWORD }}'; SELECT value FROM answer;\"
+" > .github/workflows/test-db.yml
+
