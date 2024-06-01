@@ -18,6 +18,5 @@ jobs:
 
     - name: Test SQLite Database
       run: |
-        sqlcipher github_actions_question.db -cmd \"PRAGMA key = '\${{ secrets.DB_PASSWORD }}'; SELECT value FROM answer;\"
-" > .github/workflows/test-db.yml
+        sqlcipher github_actions_question.db -cmd "PRAGMA key = '${{ secrets.DB_PASSWORD }}'; SELECT value FROM answer;"
 
