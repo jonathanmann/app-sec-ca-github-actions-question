@@ -1,7 +1,11 @@
 
-# GitHub Actions SQLite Encryption Example
+# AppSec CA Interview Question: GitHub Actions Secrets
 
-This project demonstrates how to use GitHub Actions with secrets to securely access an encrypted SQLite database using SQLCipher.
+This exercise is designed to test the following skills:
+- Reading the workflow file to determine which variable needs to be set as a secret.
+- Setting the identified secret within GitHub.
+- Triggering the workflow within GitHub Actions.
+- Finding and retrieving the correct value from the workflow logs.
 
 ## Setup Instructions
 
